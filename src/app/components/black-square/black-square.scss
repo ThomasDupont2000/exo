@@ -1,13 +1,21 @@
 :host {
     background-color: black;
-    padding: 12px;
+    width: 25%;
+    height: 35vh;
 }
 
 .container {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
-    align-content: flex-start;
     flex-direction: row;
+    height: 35vh;
+}
+
+.wrap {
+    flex-wrap: wrap;
+}
+
+.no-wrap {
+    flex-wrap: nowrap;
 }

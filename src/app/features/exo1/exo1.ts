@@ -10,7 +10,8 @@ import { Checkbox } from '../../components/checkbox/checkbox';
 })
 export class Exo1 {
   isChecked = false;
+
   checkboxUpdate(value: boolean) {
-  console.log(value);
+    this.isChecked = value;
   }
 }

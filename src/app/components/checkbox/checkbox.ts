@@ -9,7 +9,7 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
   styleUrl: './checkbox.scss'
 })
 export class Checkbox {
-  @Input() checked: boolean = false;
+  @Input() checked = false;
   @Output() checkedChange = new EventEmitter<boolean>();
 
   checkboxUpdate(value: boolean) {
