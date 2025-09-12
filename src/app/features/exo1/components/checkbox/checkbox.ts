@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component, input, output } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 
@@ -9,8 +9,8 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
   styleUrl: './checkbox.scss'
 })
 export class Checkbox {
-  @Input() checked = false;
-  @Output() checkedChange = new EventEmitter<boolean>();
+  checked = input(false);
+  checkedChange = output<boolean>();
 
   checkboxUpdate(value: boolean) {
     this.checkedChange.emit(value);

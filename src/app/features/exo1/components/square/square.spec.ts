@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { Greensquare } from './green-square';
+import { Greensquare } from './square';
 
 describe('Greensquare', () => {
   let component: Greensquare;
