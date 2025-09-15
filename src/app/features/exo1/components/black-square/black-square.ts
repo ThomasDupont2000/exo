@@ -10,4 +10,5 @@ import { Square } from '../square/square';
 })
 export class Blacksquare {
   checked = input(false);
+
 }

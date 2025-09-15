@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, input } from '@angular/core';
 
 @Component({
   selector: 'app-square',
@@ -7,5 +7,6 @@ import { Component } from '@angular/core';
   styleUrl: './square.scss'
 })
 export class Square {
+  color = input('');
 
 }
