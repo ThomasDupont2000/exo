@@ -10,9 +10,9 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
 })
 export class Checkbox {
   checked = input(false);
-  checkedChange = output<boolean>();
+  checkedEvent = output<boolean>();
 
-  checkboxUpdate(value: boolean) {
-    this.checkedChange.emit(value);
+  onCheckboxUpdate(value: boolean) {
+    this.checkedEvent.emit(value);
   }
 }

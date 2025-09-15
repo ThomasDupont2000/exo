@@ -11,7 +11,7 @@ import { Checkbox } from './components/checkbox/checkbox';
 export class Exo1 {
   isChecked = false;
 
-  checkboxUpdate(value: boolean) {
+  onCheckboxUpdate(value: boolean) {
     this.isChecked = value;
   }
 }
