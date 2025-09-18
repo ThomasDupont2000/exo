@@ -1,0 +1,6 @@
+<app-component1 
+    *ngFor="let letter of letters" 
+    [letter]="letter" 
+    [activeLetter]="selectedLetter"
+    (selectedLetterEvent)="onSelectedLetter($event)">
+</app-component1>
