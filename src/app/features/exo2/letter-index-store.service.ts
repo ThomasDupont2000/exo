@@ -4,6 +4,7 @@ import { BehaviorSubject, Observable } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
+
 export class LetterIndexStoreService {
   private letterSubject = new BehaviorSubject<string>('Aucun');
 

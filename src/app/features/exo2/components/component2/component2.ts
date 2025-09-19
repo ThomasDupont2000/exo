@@ -13,7 +13,7 @@ import { LetterIndexStoreService } from '../../letter-index-store.service';
 })
 
 export class Component2 {
-  private readonly letterIndexStoreService = inject(LetterIndexStoreService)
+  private readonly letterIndexStoreService = inject(LetterIndexStoreService);
 
   readonly letters = ['A', 'B', 'C', 'D'];
   selectedLetter?: string;
