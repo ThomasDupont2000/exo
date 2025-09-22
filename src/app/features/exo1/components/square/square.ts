@@ -7,6 +7,6 @@ import { Component, input } from '@angular/core';
   styleUrl: './square.scss'
 })
 export class Square {
-  color = input('');
+  readonly color = input('');
 
 }

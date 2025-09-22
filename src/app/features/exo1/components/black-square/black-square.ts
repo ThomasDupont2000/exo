@@ -9,6 +9,6 @@ import { Square } from '../square/square';
   styleUrl: './black-square.scss'
 })
 export class Blacksquare {
-  checked = input(false);
+  readonly checked = input(false);
 
 }

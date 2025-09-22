@@ -1,6 +1,6 @@
+@for (letter of letters; track letter) {
 <app-component1 
-    *ngFor="let letter of letters" 
-    [letter]="letter" 
-    [activeLetter]="selectedLetter"
-    (selectedLetterEvent)="onSelectedLetter($event)">
-</app-component1>
+    [activeLetter]="selectedLetter" 
+    [letter]="letter"
+    (selectedLetterEvent)="onSelectedLetter($event)" />
+}

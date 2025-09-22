@@ -1,1 +1,1 @@
-<button (click)="onSelectedLetter()" [ngClass]="{'activeBorder': isActiveBorder, 'noBorder': !isActiveBorder}">{{ letter() }}</button>
+<button type="button" [ngClass]="{'activeBorder': isActiveBorder, 'noBorder': !isActiveBorder}" (click)="onSelectedLetter()">{{ letter() }}</button>

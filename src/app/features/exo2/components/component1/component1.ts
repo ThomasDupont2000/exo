@@ -10,16 +10,16 @@ import { Component, effect, input, output } from '@angular/core';
   styleUrl: './component1.scss'
 })
 export class Component1 {
-  letter = input<string>('');
-  selectedLetterEvent = output<string>();
+  readonly letter = input<string>('');
+  readonly selectedLetterEvent = output<string>();
   isActiveBorder = false;
-  activeLetter = input<string>();
+  readonly activeLetter = input<string>();
 
   constructor () {
     effect(() => this.selectedLetterChange()) 
   }
 
-  onSelectedLetter() {
+  onSelectedLetter(): void {
     this.selectedLetterEvent.emit(this.letter());
     this.isActiveBorder = true;
   }
