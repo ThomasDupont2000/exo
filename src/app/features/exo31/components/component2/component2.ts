@@ -15,13 +15,18 @@ export class Component2 {
   
   onGenerateNumber():void {
     this.numberGenerated = Math.floor(100 * Math.random());
+
     if (this.key() === 'number1') {
-      //récupère, modifie, eet nvoyer
-      const x = this.addCalculatorStoreService.getNumberValue();
-      x['number1'] = this.numberGenerated
-      this.addCalculatorStoreService.changeNumber(this.numberGenerated);
+
+      const key1 = this.addCalculatorStoreService.getNumberValue();
+      key1.number1 = this.numberGenerated
+      this.addCalculatorStoreService.changeNumber(key1);
+
     } else if (this.key() === 'number2') {
-      this.addCalculatorStoreService.changeNumber(this.numberGenerated);
+
+      const key2 = this.addCalculatorStoreService.getNumberValue();
+      key2.number2 = this.numberGenerated
+      this.addCalculatorStoreService.changeNumber(key2);
     }
   }
 }

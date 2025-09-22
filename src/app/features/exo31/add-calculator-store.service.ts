@@ -1,22 +1,23 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable } from 'rxjs';
+import { NumberGenerated } from './interfaces/number-generated';
 
 @Injectable({
   providedIn: 'root'
 })
 
 export class AddCalculatorStoreService {
-    private numberGeneratedSubject = new BehaviorSubject<object: <any>>({});
+    private numberGeneratedSubject = new BehaviorSubject<NumberGenerated>({} as NumberGenerated);
     
-    getNumberSubjectObs(): Observable<object>{
+    getNumberSubjectObs(): Observable<NumberGenerated>{
         return this.numberGeneratedSubject.asObservable();
     }
 
-    getNumberValue():object {
+    getNumberValue():NumberGenerated {
         return this.numberGeneratedSubject.getValue();
     }
 
-    changeNumber(newNumber: object):void {
+    changeNumber(newNumber: NumberGenerated):void {
         this.numberGeneratedSubject.next(newNumber);
     }
 }
