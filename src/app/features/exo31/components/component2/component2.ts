@@ -1,0 +1,27 @@
+import { Component, inject, input } from '@angular/core';
+import { AddCalculatorStoreService } from '../../add-calculator-store.service';
+
+@Component({
+  selector: 'app-component2',
+  templateUrl: './component2.html',
+  styleUrl: './component2.scss'
+})
+export class Component2 {
+  private readonly addCalculatorStoreService = inject(AddCalculatorStoreService);
+
+  readonly key = input<string>();
+
+  numberGenerated?: number;
+  
+  onGenerateNumber():void {
+    this.numberGenerated = Math.floor(100 * Math.random());
+    if (this.key() === 'number1') {
+      //récupère, modifie, eet nvoyer
+      const x = this.addCalculatorStoreService.getNumberValue();
+      x['number1'] = this.numberGenerated
+      this.addCalculatorStoreService.changeNumber(this.numberGenerated);
+    } else if (this.key() === 'number2') {
+      this.addCalculatorStoreService.changeNumber(this.numberGenerated);
+    }
+  }
+}
